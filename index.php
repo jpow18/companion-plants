@@ -1,3 +1,8 @@
+<?php 
+  $plant = $_GET;
+  $plant = filter_var($plant, FILTER_SANITIZE_SPECIAL_CHARS);
+  
+?>
 <!DOCTYPE html>
 <html>
 
@@ -10,12 +15,13 @@
 
 <body>
   <?php include("./view/header.php") ?>
-  
-  <ul id="sorted-list"></ul>
-  <footer>
-    <p>Contact Us: contact@example.com</p>
-    <p>Copyright © 2022 Example Company</p>
-  </footer>
+  <?php include("./view/form.php") ?>
+  <?php 
+    if (!empty($plant))
+    include("./view/list.php") 
+  ?>
+
+  <?php include("./view/footer.php") ?>
 </body>
 
 </html>
