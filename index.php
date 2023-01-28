@@ -1,17 +1,19 @@
 <?php
 
-// receive GET data from form
-$plant = $_GET['plant'];
+  if (array_key_exists('plant', $_GET)) {
+    // receive GET data from form
+    $plant = $_GET['plant'];
 
-// filter for special characters
-$plant = filter_var($plant, FILTER_SANITIZE_SPECIAL_CHARS);
+    // filter for special characters
+    $plant = filter_var($plant, FILTER_SANITIZE_SPECIAL_CHARS);
 
-// validate that it has only alphabetic characters
-if (!ctype_alpha($plant)) {
-  echo "<script>document.getElementById('plant').classList.add('show');</script>";
-} else {
-  // do something with the valid input
-}
+    // validate that it has only alphabetic characters
+    if (!ctype_alpha($plant)) {
+      echo "<script>document.getElementById('plant').classList.add('show');</script>";
+    } else {
+      // do something with the valid input
+    }
+  }
 
 ?>
 
