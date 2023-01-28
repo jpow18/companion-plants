@@ -7,12 +7,7 @@
     // filter for special characters
     $plant = filter_var($plant, FILTER_SANITIZE_SPECIAL_CHARS);
 
-    // validate that it has only alphabetic characters
-    if (!ctype_alpha($plant)) {
-      echo "<script>document.getElementById('plant').classList.add('show');</script>";
-    } else {
-      // do something with the valid input
-    }
+    
   }
 
 ?>

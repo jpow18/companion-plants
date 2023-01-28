@@ -59,12 +59,3 @@ footer {
   text-align: center;
   margin-top: auto;
 }
-
-.error {
-  display: none;
-}
-
-.error.show {
-  display: block;
-  color: red;
-}
