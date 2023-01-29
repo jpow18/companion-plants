@@ -7,6 +7,14 @@
     // filter for special characters
     $plant = filter_var($plant, FILTER_SANITIZE_SPECIAL_CHARS);
 
+    var_dump($plant);
+
+    // if there's user input
+    if (!empty($plant)) {
+      $plantArray = include("./extras/plants.php");
+    }
+
+    // search array from ./extras/plants.php
     
   }
 
