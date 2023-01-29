@@ -12,17 +12,6 @@
       $plantsArray = include_once('./extras/plants.php');
     }
 
-    if (!empty($plantsArray)) {
-      foreach ($plantsArray as $key => $value) {
-        if ($key == $plant) {
-          echo "<ul>";
-          foreach ($value as $companion) {
-            echo "<li>" . $companion . "</li>";
-          }
-          echo "<ul>";
-        }
-      }
-    }
   }
 ?>
 
@@ -41,8 +30,21 @@
   <?php include("./view/header.php") ?>
   <?php include("./view/form.php") ?>
   <?php
-  if (!empty($plant))
-    include("./view/list.php")
+  if (!empty($plant)) {
+    include("./view/list.php");
+    if (!empty($plantsArray)) {
+      foreach ($plantsArray as $key => $value) {
+        if ($key == $plant) {
+          echo "<ul>";
+          foreach ($value as $companion) {
+            echo "<li>" . $companion . "</li>";
+          }
+          echo "<ul>";
+        }
+      }
+    }
+
+  }
   ?>
 
   <?php include("./view/footer.php") ?>
