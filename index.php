@@ -14,14 +14,16 @@
 
     if (!empty($plantsArray)) {
       foreach ($plantsArray as $key => $value) {
-        if ($key == $plant)
-          print_r($value);
+        if ($key == $plant) {
+          echo "<ul>";
+          foreach ($value as $companion) {
+            echo "<li>" . $companion . "</li>";
+          }
+          echo "<ul>";
+        }
       }
     }
-
-
   }
-
 ?>
 
 
