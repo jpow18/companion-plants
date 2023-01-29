@@ -34,9 +34,13 @@
     include("./view/list.php");
     if (!empty($plantsArray)) {
       $found = false;
+      $count = 0;
       foreach ($plantsArray as $key => $value) {
         if ($key == $plant) {
           $found = true;
+          if ($count == 0) {
+            echo "<h4>Here are some companion plants for {$plant}";
+          }
           echo "<ul>";
           foreach ($value as $companion) {
             echo "<li>" . $companion . "</li>";
@@ -47,8 +51,8 @@
         }
       if (!$found) {
         echo "<h3>I'm sorry. We haven't organized
-           companion plants for that one. Please drop
-            us a line at our email.</h3>";
+           companion plants for that one.<br>Please drop
+            us a line at the email below.</h3>";
       }
     }
   }
