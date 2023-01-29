@@ -11,7 +11,6 @@
     if (!empty($plant)) {
       $plantsArray = include_once('./extras/plants.php');
     }
-
   }
 ?>
 
@@ -38,9 +37,7 @@
       foreach ($plantsArray as $key => $value) {
         if ($key == $plant) {
           $found = true;
-          if ($count == 0) {
-            echo "<h4>Here are some companion plants for {$plant}";
-          }
+          echo "<h4>Here are some companion plants for {$plant}";
           echo "<ul>";
           foreach ($value as $companion) {
             echo "<li>" . $companion . "</li>";
