@@ -33,17 +33,24 @@
   if (!empty($plant)) {
     include("./view/list.php");
     if (!empty($plantsArray)) {
+      $found = false;
       foreach ($plantsArray as $key => $value) {
         if ($key == $plant) {
+          $found = true;
           echo "<ul>";
           foreach ($value as $companion) {
             echo "<li>" . $companion . "</li>";
           }
           echo "<ul>";
+          break;
+          }
         }
+      if (!$found) {
+        echo "<h3>I'm sorry. We haven't organized
+           companion plants for that one. Please drop
+            us a line at our email.</h3>";
       }
     }
-
   }
   ?>
 
