@@ -1,4 +1,4 @@
 <footer>
-  <p>Contact Us: contact@example.com</p>
-  <p>Copyright © 2022 Example Company</p>
+  <p>Contact Us: jbpow18@icloud.com</p>
+  <p>Copyright © 2023</p>
 </footer>
