@@ -1,4 +1,5 @@
-$plantArray = [
+<?php 
+$pArray = [
 "carrot" => ["chives", "dill", "lettuce", "onion", "radishes", "tomatoes"],
 "tomatoes" => ["basil", "marigold", "carrots", "asparagus", "nasturtium"],
 "peppers" => ["basil", "oregano", "thyme", "parsley", "chamomile"],
@@ -11,3 +12,5 @@ $plantArray = [
 "beets" => ["chard", "lettuce", "kohlrabi", "bush beans", "onions"],
 "eggplant" => ["marigolds", "nasturtium", "tarragon", "thyme", "dill"]
 ];
+return $pArray;
+?>
