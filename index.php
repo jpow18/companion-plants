@@ -28,10 +28,8 @@
 <body>
   <?php include("./view/header.php") ?>
   <?php include("./view/form.php") ?>
-  <?php
-  if (!empty($plant)) {
-    include("./view/list.php");
-    if (!empty($plantsArray)) {
+  <?php include("./view/list.php");
+  if (!empty($plant) && !empty($plantsArray)) {
       $found = false;
       $count = 0;
       foreach ($plantsArray as $key => $value) {
@@ -52,7 +50,6 @@
             us a line at the email below.</h3>";
       }
     }
-  }
   ?>
 
   <?php include("./view/footer.php") ?>
